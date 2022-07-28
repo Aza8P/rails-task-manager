@@ -5,9 +5,9 @@
   <ul class="list-group">
     <% @tasks.each do |task| %>
        <li class="list-group-item">
-       <input class="form-check-input me-1" type="checkbox" value="" >
+       <input class="form-check-input me-1" type="checkbox" value="">
         <%= link_to task.title, task_path(task) %></li>
     <% end %>
   </ul>
-  <%= link_to "➕ Add a new task", new_path%>
+  <%= link_to "➕ Add a new task", new_task_path%>
 </div>

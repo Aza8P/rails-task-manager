@@ -1,10 +1,11 @@
-<h1><%= @task.title %></h1>
-  <div class="card">
-    <input class="form-check-input me-1" type="checkbox">
-    <p><%= @task.details %></p>
-    <%= link_to "Delete", task_path(@task),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-  </div>
+<div class=task>
+  <h1><%= @task.title %></h1>
+  <p><%= @task.details %></p>
+</div>
 
-<%= button_to "Edit this task", edit_path, :method => "get" %>
+<div class="box">
+  <%= button_to "Edit this task", edit_task_path, :method => "get" %>
+  <%= button_to "Delete this task", task_path(@task),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+</div>
+
 <%= link_to("Back to list", tasks_path)%>
